@@ -40,9 +40,9 @@ y_feature = st.sidebar.selectbox("Select Y-axis feature", df.columns[:-1]
 # Create matplotlib scatter plot
 fig, ax = plt.subplots()
 for Species in
-df['Species'].unique(): species_data = df[df['Species'] == Species]
+df['Species'].unique(): Species_data = df[df['Species'] == Species]
 
-ax.scatter(species_data[x_feature], species_data[x_feature], label=species)
+ax.scatter(Species_data[x_feature], Species_data[x_feature], label=Species)
 ax.set_xlabel(x_feature)
 ax.set_ylabel(y_feature)
 ax.legend()
