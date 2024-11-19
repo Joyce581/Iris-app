@@ -14,7 +14,7 @@ import altair as alt
 import pandas as pd
 
 # Create a chart
-chart = alt.Chart(data).mark_line(point=True).encode(
+chart = alt.Chart(data).mark_line().encode(
       x = 'Sepal Length',
       y = 'Petal Width'
 )
