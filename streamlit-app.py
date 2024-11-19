@@ -14,8 +14,7 @@ import altair as alt
 import pandas as pd
 
 # Create a chart
-chart = alt.Chart(data).mark_line().encode(
-      x = 'Sepal Length',
-      y = 'Petal Width'
-)
+chart = alt.Chart(data).mark_line().encode( x='Sepal Length', y='Petal Width') 
+
+# Afficher le chart sur Streamlit
 st.altair_chart(chart, use_container_width=True)
