@@ -19,3 +19,10 @@ chart = alt.Chart(data).mark_bar().encode( x='SepalLength', y='PetalWidth')
 # Afficher le chart sur Streamlit
 st.altair_chart(chart, use_container_width=True)
 
+import streamlit as st
+
+# Add a title to the sidebar
+st.sidebar.title("Sidebar Menu") 
+
+# Add widgets to the sidebar
+option.selectbox("Data Description", "Iris Classification")
