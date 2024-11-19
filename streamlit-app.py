@@ -25,4 +25,6 @@ import streamlit as st
 st.sidebar.title("Sidebar Menu") 
 
 # Add widgets to the sidebar
-option = st.sidebar.selectbox("Choose an Option", "Data Classification", "Iris Classification")
+option = st.sidebar.selectbox("Choose an Option:", 
+              ["Data Classification", "Iris Classification"]
+)
