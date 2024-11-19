@@ -28,7 +28,6 @@ st.sidebar.title("Joyce's Sidebar Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["Data Classification", "Iris Classification"]
 )
-!pip install -q streamlit
   
 import streamlit as st
 import matplotlib as plt
