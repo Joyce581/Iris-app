@@ -22,7 +22,7 @@ st.altair_chart(chart, use_container_width=True)
 import streamlit as st
 
 # Add a title to the sidebar
-st.sidebar.title("Sidebar Menu") 
+st.sidebar.title("Joyce's Sidebar Menu") 
 
 # Add widgets to the sidebar
 option = st.sidebar.selectbox("Choose an Option:", 
