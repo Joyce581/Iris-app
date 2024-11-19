@@ -29,7 +29,6 @@ option = st.sidebar.selectbox("Choose an Option:",
               ["vertosa", "virginica", "versicolor"]
 )
 import streamlit as st
-import matplotlib.pyplot as plt
 
 # Les données pour le graphique
 labels = ['vertosa', 'virginica', 'versicolor']
