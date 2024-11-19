@@ -28,3 +28,36 @@ st.sidebar.title("Joyce's Sidebar Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["Data Classification", "Iris Classification"]
 )
+!pip install -q streamlit
+  
+import streamlit as st
+import matplotlib as plt
+
+# Sidebar for feature selection
+x_feature = st.sidebar.selectbox("Select X-axis feature", df.columns[:-1]
+y_feature = st.sidebar.selectbox("Select Y-axis feature", df.columns[:-1]
+
+# Create matplotlib scatter plot
+fig, ax = plt.subplots()
+for Species in
+df['Species'].unique(): species_data = df[df['Species'] == Species]
+
+ax.scatter(species_data[x_feature], species_data[x_feature], label=species)
+ax.set_xlabel(x_feature)
+ax.set_ylabel(y_feature)
+ax.legend()
+
+# display the plot in Streamlit
+st.pyplot(fig)
+
+
+
+
+
+
+
+
+
+
+
+
