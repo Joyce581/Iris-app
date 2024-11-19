@@ -28,25 +28,22 @@ st.sidebar.title("Joyce's Sidebar Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["Data Classification", "Iris Classification"]
 )
-  
+
 import streamlit as st
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
-# Sidebar for feature selection
-x_feature = st.sidebar.selectbox("Select X-axis feature", df.columns[:-1]
-y_feature = st.sidebar.selectbox("Select Y-axis feature", df.columns[:-1]
+# Les données pour le graphique
+labels = ['Setosa', 'Virginica', 'Versicolor']
+sizes = [15, 30, 45]  # Pourcentages des parts
+colors = ['gold', 'yellowgreen', 'lightcoral']
+explode = (0.1, 0, 0) # Exploser la première part (Catégorie A)
 
-# Create matplotlib scatter plot
+# Création du graphique
 fig, ax = plt.subplots()
-for Species in
-df['Species'].unique(): Species_data = df[df['Species'] == Species]
+ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+ax.axis('equal')  # Assure que le diagramme est dessiné en cercle.
 
-ax.scatter(Species_data[x_feature], Species_data[x_feature], label=Species)
-ax.set_xlabel(x_feature)
-ax.set_ylabel(y_feature)
-ax.legend()
-
-# display the plot in Streamlit
+# Affichage du graphique dans Streamlit
 st.pyplot(fig)
 
 
