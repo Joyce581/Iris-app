@@ -15,6 +15,6 @@ import pandas as pd
 
 # Create a chart
 chart = alt.Chart(data).mark_line(point=True).encode(
-      x = 'Sepal Length'
+      x = 'Sepal Length',
       y = 'Petal Width'
 )
