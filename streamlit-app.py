@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 # Les données pour le graphique
 labels = ['setosa', 'versicolor', 'virginica']
 sizes = [25, 30, 45]  # Pourcentages des parts
-colors = ['gold', 'yellowgreen', 'lightcoral',]
+colors = ['gold', 'yellowgreen', 'lightcoral']
 explode = (0.1, 0, 0) 
 
 # Création du graphique
