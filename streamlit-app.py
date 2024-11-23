@@ -5,7 +5,7 @@ import pandas as pd
 data = pd.read_csv('Iris.csv', delimiter=';')
 
 # Créer un titre
-st.title("Mes tableaux d'Iris sur Streamlit")
+st.title("Mes tableaux de bord d'Iris sur Streamlit")
 
 # Afficher les données dans un tableau
 #st.table(data)
