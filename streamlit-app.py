@@ -29,19 +29,8 @@ option = st.sidebar.selectbox("Choose an Option:",
               ["vertosa", "virginica", "versicolor"]
 )
 # Plots
-def make_choropleth(PetalLength, PetalWidth, SepalWidth, SepalLength):
-    choropleth = px.choropleth(input_df, locations=input_id, color=input_column,
-                               color_continuous_scale=input_color_theme,
-                               hover_name= input_id,
-                               locationmode='ISO-3')
-    choropleth.update_layout(
-        template='plotly_dark',
-        plot_bgcolor='rgba(0, 0, 0, 0)',
-        paper_bgcolor='rgba(0, 0, 0, 0)',
-        margin=dict(l=0, r=0, t=0, b=0),
-        height=350
-    )
-return choropleth
+streamlit run iris_pairplot_app.py
+
 
 
 
