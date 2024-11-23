@@ -39,7 +39,7 @@ import altair as alt
 import pandas as pd
 
 # Create a chart
-chart = alt.Chart(data).histogramme().encode( x='SepalWidth', y='SepalLength') 
+chart = alt.Chart(data).mark_histogramme().encode( x='SepalWidth', y='SepalLength') 
 
 # Afficher le chart sur Streamlit
 st.altair_chart(chart, use_container_width=True)
