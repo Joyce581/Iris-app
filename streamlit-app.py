@@ -47,6 +47,19 @@ ax.set_title('Graphique en Nuage de Points')
 
 # Afficher le graphique dans Streamlit
 st.pyplot(fig)
+import streamlit as st
+import plotly.express as px
+import numpy as np
+
+# Générer des données aléatoires pour le graphique en nuage de points
+x = np.random.rand(50)
+y = np.random.rand(50)
+
+# Créer le graphique
+fig = px.scatter(x=x, y=y, labels={'x': 'Sepal Length', 'y': 'Petal Length'}, title='Graphique en Nuage de Points')
+
+# Afficher le graphique dans Streamlit
+st.plotly_chart(fig)
 
 
 
