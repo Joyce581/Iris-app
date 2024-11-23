@@ -27,7 +27,14 @@ st.sidebar.title("Iris Visualisation Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["vertosa", "virginica", "versicolor"]
 )
+import altair as alt
+import pandas as pd
 
+# Create a chart
+chart = alt.Chart(data).mark_line().encode( x='SepalWidth', y='PetalLength') 
+
+# Afficher le chart sur Streamlit
+st.altair_chart(chart, use_container_width=True)
 
 
 
