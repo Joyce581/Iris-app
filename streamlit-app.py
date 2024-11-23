@@ -41,7 +41,7 @@ def make_choropleth(PetalLength, PetalWidth, SepalWidth, SepalLength):
         margin=dict(l=0, r=0, t=0, b=0),
         height=350
     )
-
+return choropleth
 
 
 
