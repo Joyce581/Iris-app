@@ -28,6 +28,25 @@ st.sidebar.title("Iris Visualisation Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["vertosa", "virginica", "versicolor"]
 )
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Générer des données aléatoires pour le graphique en nuage de points
+x = np.random.rand(50)
+y = np.random.rand(50)
+
+# Créer le graphique
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+
+# Ajouter des labels
+ax.set_xlabel('Axe X')
+ax.set_ylabel('Axe Y')
+ax.set_title('Graphique en Nuage de Points')
+
+# Afficher le graphique dans Streamlit
+st.pyplot(fig)
 
 
 
