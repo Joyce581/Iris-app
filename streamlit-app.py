@@ -28,38 +28,19 @@ st.sidebar.title("Iris Visualisation Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["vertosa", "virginica", "versicolor"]
 )
-import streamlit as st
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Générer des données aléatoires pour le graphique en nuage de points
-x = np.random.rand(50)
-y = np.random.rand(50)
-
-# Créer le graphique
-fig, ax = plt.subplots()
-ax.scatter(x, y)
-
-# Ajouter des labels
-ax.set_xlabel('Axe X')
-ax.set_ylabel('Axe Y')
-ax.set_title('Graphique en Nuage de Points')
-
-# Afficher le graphique dans Streamlit
-st.pyplot(fig)
-import streamlit as st
-import plotly.express as px
-import numpy as np
-
-# Générer des données aléatoires pour le graphique en nuage de points
-x = np.random.rand(50)
-y = np.random.rand(50)
-
-# Créer le graphique
-fig = px.scatter(x=x, y=y, labels={'x': 'Sepal Length', 'y': 'Petal Length'}, title='Graphique en Nuage de Points')
-
-# Afficher le graphique dans Streamlit
-st.plotly_chart(fig)
+# Plots
+def make_choropleth(PetalLength, PetalWidth, SepalWidth, SepalLength):
+    choropleth = px.choropleth(input_df, locations=input_id, color=input_column,
+                               color_continuous_scale=input_color_theme,
+                               hover_name= input_id,
+                               locationmode='ISO-3')
+    choropleth.update_layout(
+        template='plotly_dark',
+        plot_bgcolor='rgba(0, 0, 0, 0)',
+        paper_bgcolor='rgba(0, 0, 0, 0)',
+        margin=dict(l=0, r=0, t=0, b=0),
+        height=350
+    )
 
 
 
