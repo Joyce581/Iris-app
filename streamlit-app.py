@@ -45,6 +45,14 @@ chart = alt.Chart(data).mark_arc().encode( x='SepalWidth', y='SepalLength')
 st.altair_chart(chart, use_container_width=True)
 
 
+import streamlit as st
+import pandas as pd
+
+# Charger les données
+data = pd.read_csv('auto mpg.csv', delimiter=',')
+
+# Créer un titre
+st.title("Mes dashboard d'auto mpg sur Streamlit")
 
 
 
