@@ -28,8 +28,7 @@ st.sidebar.title("Iris Visualisation Menu")
 option = st.sidebar.selectbox("Choose an Option:", 
               ["vertosa", "virginica", "versicolor"]
 )
-# Plots
-streamlit run iris_pairplot_app.py
+
 
 
 
