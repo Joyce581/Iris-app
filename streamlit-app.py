@@ -5,7 +5,7 @@ import pandas as pd
 data = pd.read_csv('Iris.csv', delimiter=';')
 
 # Créer un titre
-st.title("Mon premier tableau de bord Streamlit")
+st.title("Mes tableaux d'Iris sur Streamlit")
 
 # Afficher les données dans un tableau
 #st.table(data)
@@ -32,6 +32,14 @@ import pandas as pd
 
 # Create a chart
 chart = alt.Chart(data).mark_line().encode( x='SepalWidth', y='PetalLength') 
+
+# Afficher le chart sur Streamlit
+st.altair_chart(chart, use_container_width=True)
+import altair as alt
+import pandas as pd
+
+# Create a chart
+chart = alt.Chart(data).histogramme().encode( x='SepalWidth', y='SepalLength') 
 
 # Afficher le chart sur Streamlit
 st.altair_chart(chart, use_container_width=True)
