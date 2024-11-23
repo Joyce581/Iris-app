@@ -29,21 +29,6 @@ option = st.sidebar.selectbox("Choose an Option:",
               ["vertosa", "virginica", "versicolor"]
 )
 import streamlit as st
-
-# Les données pour le graphique
-labels = ['vertosa', 'virginica', 'versicolor']
-sizes = [15, 30, 45]  # Pourcentages des parts
-colors = ['gold', 'yellowgreen', 'lightcoral']
-explode = (0.1, 0, 0, 0)  # Exploser la première part (Catégorie A)
-
-# Création du graphique
-fig, ax = plt.subplots()
-ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
-ax.axis('equal')  # Assure que le diagramme est dessiné en cercle.
-
-# Affichage du graphique dans Streamlit
-st.pyplot(fig)
-import streamlit as st
 import matplotlib.pyplot as plt
 
 # Les données pour le graphique
