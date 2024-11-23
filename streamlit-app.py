@@ -9,7 +9,6 @@ st.title("Mon premier tableau de bord Streamlit")
 
 # Afficher les données dans un tableau
 #st.table(data)
-
 import altair as alt
 import pandas as pd
 
